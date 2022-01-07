@@ -2,7 +2,7 @@ const $themeBtn = document.querySelector(".theme-button"),
   $selectors = document.querySelectorAll(".container *"),
   $body = document.querySelector("body"),
   $subtitle = document.querySelectorAll(".subtitle"),
-  $iconlinkFooter = document.querySelector("footer i");
+  $iconViewProfile = document.querySelector(".view-profile i");
 
 let moon = `<i class="fas fa-moon"></i>`,
   sun = `<i class="fas fa-sun"></i>`;
@@ -21,7 +21,7 @@ const darkMode = () => {
   $selectors.forEach((el) => {
     el.classList.add("dark-mode");
   });
-  $iconlinkFooter.style.color = "#5a91d9";
+  $iconViewProfile.style.color = "#5a91d9";
   $themeBtn.innerHTML = sun;
   localStorage.setItem("theme", "dark");
 };

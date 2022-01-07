@@ -10,7 +10,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
 }
 
 p {
@@ -33,10 +34,10 @@ h1 {
   grid-template-areas:
     "header header"
     "profile profile"
+    "view-profile view-profile"
     "studies knowledge"
     "works-performed objetives"
-    "work-achievements languages"
-    "footer footer";
+    "work-achievements languages";
 }
 
 .header {
@@ -56,6 +57,7 @@ h1 {
 }
 
 .theme-button {
+  font-size: 1.2rem;
   position: fixed;
   bottom: 0;
   right: 0;
@@ -73,6 +75,7 @@ h1 {
 
 .theme-button i {
   color: #fff;
+  padding: 0.4rem;
 }
 
 .header a {
@@ -131,7 +134,8 @@ section {
   grid-area: studies;
 }
 
-.subtitle {
+.subtitle,
+.view-profile a span {
   color: var(--secondary-color);
 }
 
@@ -164,8 +168,8 @@ section {
   grid-area: languages;
 }
 
-.footer {
-  grid-area: footer;
+.view-profile {
+  grid-area: view-profile;
   padding: var(--padding-section);
   background-color: #d4d4d4;
   text-align: center;
@@ -176,18 +180,19 @@ section {
   -o-border-radius: var(--border-radius);
 }
 
-.footer a {
+.view-profile a {
   text-decoration: none;
   color: var(--secondary-color);
   overflow: hidden;
   position: relative;
   display: block;
   overflow: hidden;
-  width: 140px;
   margin: auto;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
 }
 
-.footer i {
+.view-profile i {
   display: none;
 }
 
@@ -214,13 +219,13 @@ section {
     grid-template-areas:
       "header"
       "profile"
+      "view-profile"
       "studies"
       "knowledge"
       "objetives"
       "works-performed"
       "work-achievements"
-      "languages"
-      "footer";
+      "languages";
   }
 
   .profile {
@@ -241,7 +246,7 @@ section {
   }
 }
 
-@media screen and (min-width: 576px) {
+@media screen and (min-width: 756px) {
   section {
     padding: 1.5rem;
   }
@@ -252,11 +257,19 @@ section {
 
   .theme-button {
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 2rem;
-    margin: 0.3rem;
+    top: 2px;
+    right: 2px;
+    bottom: 1.6rem;
+    margin: 0.2rem;
     padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .theme-button:hover {
+    opacity: 0.8;
   }
 
   .container {
@@ -265,11 +278,11 @@ section {
     grid-template-areas:
       "header header"
       "profile profile"
+      "view-profile view-profile"
       "studies knowledge"
       "objetives objetives"
       "works-performed works-performed"
-      "work-achievements languages"
-      "footer footer";
+      "work-achievements languages";
   }
 
   .container-description-profile {
@@ -283,10 +296,10 @@ section {
     grid-template-areas:
       "header header"
       "profile profile"
+      "view-profile view-profile"
       "studies knowledge"
       "works-performed objetives"
-      "work-achievements languages"
-      "footer footer";
+      "work-achievements languages";
   }
 }
 
@@ -318,12 +331,12 @@ section {
     padding-left: 0.5rem;
   }
 
-  .footer {
-    padding: 0.5rem;
+  .view-profile {
+    padding: 1rem;
   }
 
-  /* Animación link footer */
-  .footer a span {
+  /* Animación link view-profile */
+  .view-profile a span {
     transition: transform 0.2s ease-out;
     -webkit-transition: transform 0.2s ease-out;
     -moz-transition: transform 0.2s ease-out;
@@ -331,12 +344,12 @@ section {
     -o-transition: transform 0.2s ease-out;
   }
 
-  .footer a span:first-child {
+  .view-profile a span:first-child {
     display: inline-block;
-    padding: 10px;
+    padding: 0.8rem;
   }
 
-  .footer a span:last-child {
+  .view-profile a span:last-child {
     position: absolute;
     top: 0;
     right: 0;
@@ -348,17 +361,17 @@ section {
     transform: translateY(-100%);
   }
 
-  .footer i {
+  .view-profile i {
     display: block;
     font-size: 30px;
   }
 
-  .footer a:hover span:first-child {
+  .view-profile a:hover span:first-child {
     transform: translateY(100%);
   }
 
-  .footer a:hover span:last-child,
-  .footer[data-animation] a:hover span:last-child {
+  .view-profile a:hover span:last-child,
+  .view-profile[data-animation] a:hover span:last-child {
     transform: none;
   }
 }
