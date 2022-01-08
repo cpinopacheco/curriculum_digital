@@ -104,16 +104,12 @@ section {
 }
 
 .container-img-profile {
-  width: 10rem;
-  height: 10rem;
+  width: 12rem;
+  height: 12rem;
   margin-right: 2rem;
   border-radius: 50%;
   overflow: hidden;
-  border: 0.3rem solid var(--secondary-color);
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
+  outline: 0.3rem solid var(--secondary-color);
 }
 
 .container-description-profile {
