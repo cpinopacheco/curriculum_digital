@@ -108,7 +108,6 @@ section {
 .container-img-profile {
   width: 12rem;
   height: 12rem;
-  margin-right: 2rem;
   border-radius: 50%;
   overflow: hidden;
   outline: 0.3rem solid var(--secondary-color);
