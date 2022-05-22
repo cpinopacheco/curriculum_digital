@@ -82,6 +82,11 @@ h1 {
 .header a {
   color: #fff;
   text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.header a:hover {
+  opacity: 0.6;
 }
 
 .header p {
