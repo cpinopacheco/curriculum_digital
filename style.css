@@ -136,6 +136,11 @@ section {
   grid-area: studies;
 }
 
+.container-subtitle {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .subtitle,
 .view-profile a span {
   color: var(--secondary-color);
