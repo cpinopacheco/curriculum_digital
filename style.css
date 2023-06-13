@@ -131,6 +131,10 @@ section {
   padding-left: 1rem;
 }
 
+.experience-container {
+  margin-bottom: 1.5rem;
+}
+
 .studies {
   grid-area: studies;
 }
@@ -145,7 +149,7 @@ section {
   color: var(--secondary-color);
 }
 
-.works-performed div {
+.works-performed .container-subtitle {
   display: flex;
   justify-content: space-between;
 }
